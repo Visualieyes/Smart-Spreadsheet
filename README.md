@@ -1,8 +1,57 @@
 # Smart Spreadsheet
 
+## Running the solution
+
+1. **Create a virtual environment**:
+
+   - Open your terminal and navigate to the project directory.
+   - Run the following command to create a virtual environment using `venv`:
+     ```sh
+     python3 -m venv env
+     ```
+
+2. **Activate the virtual environment**:
+
+   - On macOS and Linux:
+     ```sh
+     source env/bin/activate
+     ```
+   - On Windows:
+     ```sh
+     .\env\Scripts\activate
+     ```
+
+3. **Install the required packages**:
+
+   - With the virtual environment activated, install the required packages using `pip`:
+     ```sh
+     pip install -r requirements.txt
+     ```
+
+4. **Create a `.env` file**:
+
+   - In the project root directory, create a `.env` file based on the provided `.env.example` file.
+   - Open the `.env.example` file and copy its content to the newly created `.env` file.
+   - Add your OpenAI key to the `.env` file:
+     ```sh
+     OPENAI_KEY=your_openai_key_here
+     ```
+
+5. **Run the application**:
+   - With the virtual environment still activated, run the main Python script:
+     ```sh
+     python3 main.py
+     ```
+
+By following these steps, you should be able to set up and run the Smart Spreadsheet solution successfully.
+
+Continue reading below for the problem description
+
+# Smart Spreadsheet Description
+
 ## Introduction
 
-As a **Founding Senior Engineer** at Capix you will lead the the development of the Company’s technical vision and strategy, oversee all the technological development, and help develop and implement the product. This is a very critical role. It is paramount that you are a master of engineering able to ship great software fast. We’re looking for the 10Xers and this project helps us evaluate if you can get the job done. 
+As a **Founding Senior Engineer** at Capix you will lead the the development of the Company’s technical vision and strategy, oversee all the technological development, and help develop and implement the product. This is a very critical role. It is paramount that you are a master of engineering able to ship great software fast. We’re looking for the 10Xers and this project helps us evaluate if you can get the job done.
 
 The project is open-ended. There is no single right answer, and you have complete creative freedom to solve the problem in whatever way you want.
 
@@ -10,8 +59,7 @@ The project is open-ended. There is no single right answer, and you have complet
 
 You are an engineer leading product development at Capix. We just received a request from a key client to build a system that can answer questions from Excel files. The timeline is tight. We have two days to develop this feature. How should we deliver this to our client?
 
-
-In the repo, there are example Excel files that the client has shared with us. There are also some functions we developed to give you a head start, which you may or may not choose to use.  
+In the repo, there are example Excel files that the client has shared with us. There are also some functions we developed to give you a head start, which you may or may not choose to use.
 
 ## Goals
 
@@ -22,31 +70,33 @@ In the repo, there are example Excel files that the client has shared with us. T
 5. Now that we have a Smart Spreadsheet AI. Let's deploy it for our user to use!
 
 ## FAQ
-* **How long do I have to solve the problem?** 
 
-  * You have two days to sovle the problem. 
+- **How long do I have to solve the problem?**
 
-* **What tools, tech stack should I use?**
+  - You have two days to sovle the problem.
 
-  * Whatever tools you want. There are no particular requirements. And yes, you can use ChatGPT or nay other open source model and we encourage it.
+- **What tools, tech stack should I use?**
 
-* **Is building a full-fledged frontend required?** 
-  * Would be great, but it's not required. Focus on your strengths.
+  - Whatever tools you want. There are no particular requirements. And yes, you can use ChatGPT or nay other open source model and we encourage it.
 
-* **Do I have to achieve all the goals?** 
+- **Is building a full-fledged frontend required?**
 
-  * We will be very impressed if you can! Do your best!
+  - Would be great, but it's not required. Focus on your strengths.
 
-* **How to submit?**
+- **Do I have to achieve all the goals?**
 
-  * Please fork the repo, and submit your solution in a branch of your own repo and share the link of your repo with us via email.
+  - We will be very impressed if you can! Do your best!
+
+- **How to submit?**
+
+  - Please fork the repo, and submit your solution in a branch of your own repo and share the link of your repo with us via email.
 
 ## Evaluation Criteria
 
 1. **Functionality**: Ability to parse and serialize tables from provided Excel files, including generalizing the solution to handle multiple examples. The AI should answer both basic questions; advanced generalization and AI inference are considered a bonus.
 
 2. **Problem Solving and Creativity**: Systematic and effective approach to breaking down and addressing each part of the problem. Novel or creative solutions with innovative use of tools and techniques.
-  
+
 3. **Code Quality and Readability**: Clear, readable, and well-structured code with consistent naming conventions.
 
 4. **Algorithm Design and Efficiency**: Thoughtful and effective algorithm design, considering edge cases and using appropriate data structures. Efficient implementation in terms of time and space complexity.
@@ -56,4 +106,3 @@ In the repo, there are example Excel files that the client has shared with us. T
 ## Remarks
 
 We appreicate the time you will devote to this project. We hope you enjoy this exercise!
-
