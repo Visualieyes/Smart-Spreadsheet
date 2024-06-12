@@ -26,16 +26,16 @@ def load_data(file_path):
 
 def get_main_menu_input() -> str:
     """Get menu options"""
-    print("1. load excel file \n2. New AI Chat. \n3. Exit program. ")
+    print("\n\n1. load excel file \n2. Display data \n3. Serialize tables \n4. New AI Chat. \n5. Exit program. ")
     return input("Select an option: ")
 
 def get_chat_menu_input() -> str:
     """Get main menu chat options"""
-    print("1. Back to main menu. \n2. Exit program.")
+    print("\n\n1. Back to main menu. \n2. Exit program.")
     return input("Select an option, or enter your chat message: ")
 
 def get_excel_filepath_input() -> str:
-    file_path = input("Enter the path to your Excel file (ex: ./tests/example_0.xlsx): ")
+    file_path = input("\n\nEnter the path to your Excel file (ex: ./tests/example_0.xlsx): ")
     return file_path
 
 def main():
@@ -64,8 +64,21 @@ def main():
             except Exception as e:
                 print(f"Error reading file: {e}")
                 continue
-
+        
         elif choice == "2":
+            if parser:
+                parser.display_tables()
+            else:
+                print("Please load an Excel file first.")
+
+        elif choice == "3":
+            if parser:
+                json_data = parser.serialize_tables()
+                print(json_data)
+            else:
+                print("Please load an Excel file first.")
+
+        elif choice == "4":
             if not dfs:
                 print("Please load an Excel file first.")
                 continue
@@ -116,8 +129,8 @@ def main():
                     # Display the conversation
                     display_chat_history()
 
-        elif choice == "3":
-            print("Exiting program....")
+        elif choice == "5":
+            print("Exiting program...")
             print("Goodbye!")
             exit()
 

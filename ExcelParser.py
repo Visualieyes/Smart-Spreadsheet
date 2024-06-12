@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -104,7 +105,17 @@ class ExcelParser:
         """
         Print the tables as pandas DataFrames.
         """
-        for idx, dataframe in enumerate(self.convert_to_dataframes()):
+        for idx, dataframe in enumerate(self.to_dataframes()):
             print(f"Table {idx + 1}:")
             print(dataframe)
             print("\n")
+            
+    def serialize_tables(self) -> str:
+        """
+        Serialize the extracted tables to a JSON string.
+
+        :return: JSON string containing all tables.
+        """
+        dataframes = self.to_dataframes()
+        tables_json = [df.to_json(orient='split') for df in dataframes]
+        return json.dumps(tables_json)
